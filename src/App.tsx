@@ -1,24 +1,31 @@
-import { useState, useEffect} from 'react';
+// import { useState} from 'react';
+
+interface UserProps {
+  name: string;
+
+}
 
 function App() {
 
-  const [data, setData] = useState(0)
-
-  const getData = async () => {
-    const response = await fetch('https://api.sampleapis.com/coffee/iced');
-    const json = await response.json();
-    setData(json);
+  const user: UserProps = {
+    name: 'Ricardo',
   }
 
-  useEffect(() => {
-    getData()
-  }, [])
-
-  console.log(data)
+  const handleShare = async () => {
+    try {
+      await navigator.share({
+        title: `Corte marcado de ${user.name}`,
+        text: ` Dia: 02/05 || Horario: 14h30 || Corte: Navalhado || Valor: R$30,00`,
+        url: 'https://github.com/gevolgdev',
+      })
+    } catch (err) {
+      console.log('O compartilhamento falhou!' + err);
+    }
+  }
 
   return (
     <>
-      <h1>Salve</h1>
+      <button onClick={handleShare}>Compartilhar</button>
     </>
   )
 }
