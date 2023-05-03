@@ -14,7 +14,7 @@ const appointmentSlice = createSlice({
   name: 'appointment',
   initialState,
   reducers: {
-    newAppointment: (state, {payload}: PayloadAction<AppointmentProps>): AppointmentProps[] => {
+    newAppointmentReducer: (state, {payload}: PayloadAction<AppointmentProps>): AppointmentProps[] => {
       return [
         ...state,
         {
@@ -30,5 +30,5 @@ const appointmentSlice = createSlice({
 });
 
 export default appointmentSlice.reducer;
-export const { newAppointment } = appointmentSlice.actions;
+export const { newAppointmentReducer } = appointmentSlice.actions;
 
