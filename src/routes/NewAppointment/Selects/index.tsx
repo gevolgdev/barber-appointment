@@ -45,7 +45,16 @@ const Selects: React.FC<SelectProps> = ({handleAddAppointment}) => {
       </div>
 
       <div className="containers">
-        <label>Horário</label>
+        <label>Data/Hora</label>
+        <select id='day' onChange={handleAddAppointment} className='input-date'>
+          <option disabled selected>Escolha um dia dessa semana...</option>
+          <option value='Segunda'>Segunda</option>
+          <option value='Terça'>Terça</option>
+          <option value='Quarta'>Quarta</option>
+          <option value='Quinta'>Quinta</option>
+          <option value='Sexta'>Sexta</option>
+          <option value='Sábado'>Sábado</option>
+        </select>
         <select id='hour' onChange={handleAddAppointment}>
           <option disabled selected>Escolha um horário...</option>
           <option value='08:00'>08:00</option>
