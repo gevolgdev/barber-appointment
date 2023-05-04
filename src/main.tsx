@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import { Home, NewAppointment } from './routes/index.ts';
+import { Confirm, Home, NewAppointment } from './routes/index.ts';
 import store from './redux/store.ts';
 import { Provider } from 'react-redux';
 
@@ -18,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: '/marcar',
         element: <NewAppointment/>
+      },
+      {
+        path: '/confirmar',
+        element: <Confirm/>
       },
     ]
   }
