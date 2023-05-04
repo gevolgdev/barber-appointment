@@ -3,5 +3,6 @@ export interface AppointmentProps {
   barber: string;
   cut: string;
   add: string;
+  day: string;
   hour: string;
 }
