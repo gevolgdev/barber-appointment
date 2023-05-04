@@ -17,7 +17,7 @@ const Home = () => {
           <p>Agora você consegue marcar um horário para cortar o seu cabelo/barba com mais facilidade e praticidade.</p>
           <div className="buttons">
             <button className='mark-hours' onClick={() => navigate('/marcar')}>Marcar horário</button>
-            <button className='my-hours'>Meus horários</button>
+            <button className='my-hours' onClick={() => navigate('/meus-horarios')}>Meus horários</button>
           </div>
         </div>
       </S.Content>
