@@ -11,6 +11,7 @@ const NewAppointment = () => {
 
   const INITIAL_STATE = {name: '', barber: '', cut: '', add: '', hour: ''}
   const [appointment, setAppointment] = useState<AppointmentProps>(INITIAL_STATE);
+  console.log(appointment);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -23,7 +24,7 @@ const NewAppointment = () => {
   const handleConfirm = (event: MouseEvent<HTMLButtonElement>): void => {
     event.preventDefault();
     dispatch(newAppointmentReducer(appointment))
-    navigate('/');
+    navigate('/confirmar');
   };
 
   return (

@@ -47,5 +47,6 @@ export const Forms = styled.form`
     color: white;
     border-radius: 7px;
     margin-top: 10px;
+    cursor: pointer;
   }
 `
