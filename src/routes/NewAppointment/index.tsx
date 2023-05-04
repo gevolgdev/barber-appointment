@@ -29,7 +29,7 @@ const NewAppointment = () => {
 
   return (
     <S.Wrapper>
-      <Header/>
+      <Header backToHome/>
 
       <S.Forms>
         <S.Title>Marcar Horario:</S.Title>
