@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 
 const NewAppointment = () => {
 
-  const INITIAL_STATE = {name: '', barber: '', cut: '', add: '', hour: ''}
+  const INITIAL_STATE = {name: '', barber: '', cut: '', add: '', day: '', hour: ''}
   const [appointment, setAppointment] = useState<AppointmentProps>(INITIAL_STATE);
   console.log(appointment);
 

@@ -39,6 +39,8 @@ export const Forms = styled.form`
     font-size: 1rem;
   }
 
+  .input-date {margin-bottom: 15px;}
+
   button {
     width: 200px;
     padding: 15px 0;
