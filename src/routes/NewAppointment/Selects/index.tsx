@@ -32,6 +32,7 @@ const Selects: React.FC<SelectProps> = ({handleAddAppointment}) => {
         <label>Adicionais</label>
         <select id='add' onChange={handleAddAppointment}>
           <option disabled selected>Escolha um adicional...</option>
+          <option value='Nenhum'>Nenhum</option>
           <option value='Barba'>Barba</option>
           <option value='Pezinho'>Pezinho</option>
           <option value='Sombrancelha'>Sombrancelha</option>
