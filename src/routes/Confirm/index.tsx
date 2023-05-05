@@ -12,7 +12,7 @@ const Confirm = () => {
   const userAppointment: AppointmentProps[] = useSelector((state: RootState) => state.appointmentSlice).slice(1);
   const appointmentToConfirm: AppointmentProps | null = userAppointment[userAppointment.length - 1];
 
-  const infosAppointment: string = `Me chamo ${appointmentToConfirm.name} ||  Cortar com ${appointmentToConfirm.barber} || ás ${appointmentToConfirm.hour} || Meu corte será ${appointmentToConfirm.cut} || e ${appointmentToConfirm.add} adicional.`;
+  const infosAppointment: string = `Me chamo ${appointmentToConfirm.name} ||  Cortar com ${appointmentToConfirm.barber} || Essa ${appointmentToConfirm.day} ás ${appointmentToConfirm.hour} || Meu corte será ${appointmentToConfirm.cut} || e ${appointmentToConfirm.add} adicional.`;
   const textToWpp: string = infosAppointment.replace(/ /g, '%20');
   const sendMessage: string = `https://wa.me/5519984397784?text=${textToWpp}`;
 
@@ -34,6 +34,9 @@ const Confirm = () => {
         </p>
         <p>
           <strong>Adicionais:</strong> {appointmentToConfirm.add}
+        </p>
+        <p>
+          <strong>Dia:</strong> {appointmentToConfirm.day}
         </p>
         <p>
           <strong>Horário:</strong> {appointmentToConfirm.hour}
