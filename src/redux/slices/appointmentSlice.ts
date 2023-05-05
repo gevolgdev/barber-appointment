@@ -7,6 +7,7 @@ const initialState: AppointmentProps[] = [{
   barber: '',
   cut: '',
   add: '',
+  day: '',
   hour: '',
 }];
 
@@ -22,6 +23,7 @@ const appointmentSlice = createSlice({
           barber: payload.barber,
           cut: payload.cut,
           add: payload.add,
+          day: payload.day,
           hour: payload.hour
         }
       ];
